@@ -1,0 +1,174 @@
+/* Объявление цветов */
+:root {
+    --base-color: #f7fffe;
+    --text-color: #2a313f;
+    --header-bg: #ddeeff;
+    --button-color: #b0ccff;
+    --button-hover: #c7d7ff;
+    --border-color: #ccc;
+    --light-button: #e5edff;
+    --bright-button: #b1d8ff;
+}
+
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    margin: 20px;
+}
+
+/* Стили для шапки и навигации */
+.header {
+    background: var(--header-bg);
+    padding: 10px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    margin-bottom: 0;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-list li {
+    margin: 0 10px;
+}
+
+.nav-list li a {
+    background-color: var(--button-color);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-list li a:hover {
+    background-color: var(--button-hover);
+}
+
+/* Стили для формы создания заказа */
+.content .order-form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: -20px 20px;
+}
+
+.content .order-form .form-group {
+    margin-bottom: 2px; /* Установлено на 2px для меньшего отступа */
+}
+
+.content .order-form input,
+.content .order-form .submit-button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.content .order-form .submit-button {
+    background-color: var(--button-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.content .order-form .submit-button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Остальные существующие стили для кнопок категорий и карточек продуктов */
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.category-button {
+    background-color: var(--button-color);
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.category-button:hover {
+    background-color: var(--button-hover);
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: #e0f1ff;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.product-card p {
+    margin: 10px 0;
+}
+
+.button {
+    background-color: var(--button-color);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Стили элементов в корзине */
+.remove-form input,
+.add-form input {
+    background-color: var(--light-button);
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.remove-form input:hover,
+.add-form input:hover {
+    background-color: var(--bright-button);
+}

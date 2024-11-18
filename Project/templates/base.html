@@ -1,0 +1,35 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <link rel="stylesheet" href="{% static 'index.css' %}" type="text/css">
+ <title>{% block title %}{% endblock %}</title>
+</head>
+<body class="body-bg">
+
+ <header class="header">
+    <div class="header-content">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="{% url 'product_list' %}">Главная</a></li>
+                <li><a href="{% url 'cart' %}">Корзина</a></li>
+                <li><a href="{% url 'order_create' %}">Оформить заказ</a></li>
+            </ul>
+        </nav>
+
+        <form class="order-form" action="#" method="get">
+            <label for="order_id">Введите ID заказа:</label>
+            <input type="number" id="order_id" name="order_id" required>
+            <input type="submit" value="Найти">
+        </form>
+    </div>
+ </header>
+
+ <div class="content">
+ {% block content %}{% endblock %}
+ </div>
+</body>
+</html>
